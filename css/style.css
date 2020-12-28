@@ -1,0 +1,242 @@
+:root {
+    --bg-color: #e1306f;
+    --link-color: #102FAD;
+    --link-hover-color: #122173;
+    --color-4: #F2B077;
+    --color-5: #F2F2F2;
+
+    --primary-font: 'Lobster Two', cursive;
+    --secondary-font: "Montserrat", serif;
+    --main-text-color: #000;
+
+    --white-space: 1.2rem;
+}
+
+body {
+    background-image: url(../background/whole_background.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow-x: hidden;
+    font-family: var(--secondary-font);
+    
+}
+h1 ,h2 ,h3{
+    font-weight: bold;
+    color: var(--link-hover-color);
+}
+p{
+    color: var(--link-hover-color);
+}
+
+.logo img {
+    transform: rotate(-15deg);
+    position: absolute;
+    width: 18rem;
+    height: auto;
+    top: -0.7rem;
+    left: -1.5rem;
+}
+
+.topnav {
+    font-family: var(--secondary-font);
+    font-size: 1.3rem;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.right_nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.right_nav a {
+    font-family: var(--secondary-font);
+    color: var(--link-hover-color);
+    text-decoration: none;
+    padding: 2rem;
+}
+
+nav {
+    display: none;
+}
+
+/*button look*/
+/*
+lal
+button{
+    background-color: var(--link-color);
+    text-align: center;
+    width: 50%;
+    margin-left: 55%;
+    margin-top:-2rem;
+    box-shadow: grey 4px 5px 6px;
+    border-radius: 2rem;
+}
+button > a {
+    color: white;
+    padding: 0.6rem;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    font-weight: 100;
+    margin: 0px 0.4rem;
+}
+*/
+@media all and (max-width: 799px) {
+    topnav {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .right_nav a {
+    padding: 1rem;
+}
+
+    .logo img {
+        width: 40vw;
+        left: -1rem;
+    }
+    body {
+    overflow-x: hidden;
+    }
+
+
+}
+
+@media all and (max-width: 549px) {
+    .right_nav{
+        display: none;
+    }
+    nav{
+       display: block;
+    }
+
+    body{
+        overflow-x: hidden;
+        background-image: url(../background/phone_bg.svg);
+    }
+    #menuToggle {
+        display: block;
+        position: relative;
+        top: 20px;
+        left: 90%;
+
+        z-index: 1;
+    }
+
+    #menuToggle a {
+        text-decoration: none;
+        color: var(--link-color);
+        transition: color 0.3s ease;
+    }
+
+    #menuToggle a:hover {
+        color: tomato;
+    }
+
+    #menuToggle input {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+
+        cursor: pointer;
+
+        opacity: 0;
+
+        z-index: 2;
+
+    }
+
+    #menuToggle span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+
+
+        background: var(--link-hover-color);
+        border-radius: 3px;
+
+        z-index: 1;
+
+        transform-origin: 4px 0px;
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            opacity 0.55s ease;
+    }
+
+    #menuToggle span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+
+    #menuToggle input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: ;
+    }
+
+
+    #menuToggle input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+
+    #menuToggle input:checked ~ span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+
+    #menu {
+        position: absolute;
+        width: 35rem;
+        margin: -100px 0 0 -505px;
+        padding: 30px;
+        padding-top: 125px;
+        font-family: var(--secondary-font);
+        text-align: center;
+        background-color:var(--color-5);
+        border-radius: 5%;
+
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+
+        transform-origin: 0% 0%;
+        transform: translate(100%, 0);
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+
+    #menu li {
+        padding: 10px 0;
+        font-size: 1.4rem;
+    }
+
+    #menuToggle input:checked ~ ul {
+        transform: none;
+    }
+
+}
+
+/*
+..
+--bg-color: #e1306f;
+    --link-color: #102FAD;
+    --link-hover-color: #122173;
+    --color-4: #F2B077;
+    --color-5: #F2F2F2;
+
+    --primary-font: 'Lobster Two', cursive;
+    --secondary-font: "Montserrat", serif;
+    --main-text-color: #000;
+
+    --white-space: 1.2rem;*/

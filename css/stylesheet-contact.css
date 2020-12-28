@@ -1,0 +1,133 @@
+h3 a {
+    text-decoration: none;
+}
+
+.contact-text p {
+    font-size: 20px;
+}
+
+/*//CSS that applies to browsers that support grid*/
+
+
+
+/*MOBILE VIEW*/
+
+@media all and (max-width: 548px) {
+
+    .title-contact {
+        margin-top: 15vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    h2 {
+        margin-bottom: 10vw;
+        margin-top: 0;
+    }
+
+    .contact-text {
+        margin: 6vw;
+        text-align: center;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .insta-img {
+        height: 25vw;
+        width: auto;
+        cursor: pointer;
+
+    }
+
+    @supports (display: grid) {
+
+        .instagram-images {
+            margin-top: 8vw;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            grid-gap: 1.3rem;
+        }
+    }
+}
+
+
+
+/*TABLET VIEW */
+
+@media only screen and (max-width: 899px) and (min-width: 548px) {
+
+    .title-contact {
+        display: flex;
+        justify-content: center;
+        margin-top: 5vw;
+    }
+
+    h2 {
+        margin-bottom: 5vw;
+        margin-top: 0;
+    }
+
+    article.contact-text {
+        margin: 8vw;
+        text-align: center;
+        grid-column-start: 2;
+        grid-column-end: -2;
+    }
+
+    .insta-img {
+        height: 20vw;
+        width: 20vw;
+        cursor: pointer;
+        padding: .3rem;
+    }
+
+    div.image-contact {
+        display: none;
+    }
+}
+
+
+
+/*BIG SCREEN*/
+
+@media only screen and (min-width: 899px) {
+
+    .title-contact {
+        margin: 1vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-text {
+        grid-area: contact;
+        margin: 4vw;
+        text-align: center;
+    }
+
+    .insta-img {
+        height: 10vw;
+        width: 10vw;
+        cursor: pointer;
+    }
+
+    .image-contact {
+        grid-area: img;
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-mountain {
+        height: 30vw;
+        width: auto;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 10vw 1fr 1fr 10vw;
+        grid-template-areas:
+            ". contact  img"
+    }
+
+}

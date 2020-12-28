@@ -1,0 +1,188 @@
+.title-about {
+    font-family: var(--secondary-font);
+    color: var(--link-hover-color);
+    display: flex;
+    justify-content: center;
+}
+
+.walking-lady {
+    height: 25rem;
+    width: auto;
+    grid-area: lady;
+}
+
+.poop-icon {
+    height: 2.5rem;
+    width: auto;
+    padding: .3rem;
+}
+
+.rating-icon {
+    height: 2rem;
+    width: auto;
+    padding-right: 1rem;
+}
+
+
+
+
+/*MOBILE VIEW */
+
+@media all and (max-width: 699px) {
+
+    .title-about {
+        margin-top: 5rem;
+    }
+
+    h2 {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-us {
+        padding: 3rem;
+    }
+
+    .poop-row {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .poops {
+        display: flex;
+        justify-content: center;
+    }
+
+    .rating-text {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .rating-description {
+        padding: 3rem;
+    }
+
+    .rating-description p {
+        margin-bottom: 2.5rem;
+    }
+
+    .icon-description1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .icon-description2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .icon-description3 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .icon-description4 {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+
+/*TABLET VIEW*/
+
+
+
+
+/*BIG SCREEN*/
+@media only screen and (min-width: 900px) {
+
+    .about-text {
+        grid-area: txt;
+        padding-left: 2rem;
+    }
+
+    .about-us {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            ". lady txt txt txt ."
+    }
+
+    .poop-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .poops {
+        display: flex;
+        justify-content: center;
+    }
+
+    .rating-text {
+        display: flex;
+        justify-content: center;
+    }
+
+    h2 {
+        margin: 0;
+    }
+
+    .icon-description1 {
+        display: flex;
+
+        grid-area: ic1;
+    }
+
+    .icon-description2 {
+        display: flex;
+
+        grid-area: ic2;
+    }
+
+    .icon-description3 {
+        display: flex;
+        grid-area: ic3;
+    }
+
+    .icon-description4 {
+        display: flex;
+
+        grid-area: ic4;
+    }
+
+    .weather-p {
+        grid-area: wp;
+    }
+
+    .smell-p {
+        grid-area: sp;
+    }
+
+    .price-p {
+        grid-area: pp;
+    }
+
+    .available-p {
+        grid-area: ap;
+    }
+
+    .rating-description p {
+        padding-right: 2rem;
+    }
+
+
+    .rating-description {
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: 10rem 1fr 1fr 1fr 1fr 10rem;
+        grid-template-areas:
+            ". ic1 ic2 ic3 ic4 ."
+            ". wp sp pp ap .";
+    }
+
+
+
+}

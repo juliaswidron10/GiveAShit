@@ -1,0 +1,330 @@
+:root {
+    --bg-color: #e1306f;
+    --link-color: #102FAD;
+    --link-hover-color: #122173;
+    --color-4: #F2B077;
+    --color-5: #F2F2F2;
+
+    --primary-font: 'Lobster Two', cursive;
+    --secondary-font: "Montserrat", serif;
+    --main-text-color: #000;
+
+    --white-space: 1.2rem;
+}
+
+.main_review {
+    margin: 5vw;
+}
+
+.main_review>h1 {
+    text-align: center;
+    margin: 4rem 0 0.3rem 0;
+}
+
+.main_review>p {
+    margin: 0.7rem;
+}
+
+.pic {
+    width: 100%;
+    height: 250px;
+    background-color: pink;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.pic>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* poop rating style */
+.gen_rating {
+    height: 25px;
+    width: 100%;
+    display: flex;
+    padding: 0.6rem;
+}
+
+.gen_rating>h2 {
+    font-size: 1.2rem;
+    font-weight: 100;
+    margin: 0px 0.7rem;
+}
+
+.poop {
+    width: 35px;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+div.filled_poop {
+    background-image: url(../images/poop_empty_1.svg);
+}
+
+div.empty_poop {
+    background-image: url(../images/poop_filled.svg);
+}
+
+.sect_class>h3 {
+    font-weight: 100;
+    font-size: 0.9rem;
+    margin: 0px 0.6rem;
+}
+
+/* write a review button styling */
+.review_button {
+    background-color: rgb(18, 33, 115);
+    text-align: center;
+    width: 100%;
+    box-shadow: grey 4px 5px 6px;
+    border-radius: 2rem;
+    margin-top: 6rem;
+}
+
+.review_button>p {
+    color: white;
+    padding: 0.6rem;
+    font-size: 1.7rem;
+}
+
+/* small review style*/
+.small_review>h1 {
+    text-align: center;
+    margin-top: 6rem;
+}
+
+.small_review>article {
+    margin-top: 6rem;
+}
+
+.small_review>article>div>h2 {
+    text-align: center;
+}
+
+.small_review>article>p {
+    margin: 1rem;
+}
+
+.small_review>article>div>.icon {
+    height: 4rem;
+    width: 100%;
+}
+
+.category_rating {
+    position: relative;
+    justify-content: center;
+    margin-top: -1.5rem;
+}
+
+/*User review styling*/
+.user {
+    margin: 5vw;
+    border-radius: 15px;
+    background-color: var(--color-5);
+}
+
+.user_review>h1 {
+    text-align: center;
+    margin-top: 6rem;
+}
+
+.image_user {
+    width: 100%;
+    height: 250px;
+    background-color: pink;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image_user>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.user>h2 {
+    margin: .7rem;
+}
+
+.user>.user_rating {
+    margin: -1rem 0;
+}
+
+.user>p {
+    padding: 5vw;
+}
+
+@media all and (min-width: 750px)  and (max-width: 1000px){
+    
+    main{
+        margin:0 7vw;
+    }
+    .main_review {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2rem 3rem 15rem 4rem;
+        margin: 2rem 0 ;
+    }
+
+    .main_review>.pic {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row: span 4;
+        height: 100%;
+    }
+
+    .main_review>h1 {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        margin: 0 2rem;
+        text-align: left;
+        font-size: 1.7rem;
+    }
+
+    .main_rating {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        margin: 0 2rem;
+        padding: .7rem 0;
+    }
+
+    .main_review>p {
+        grid-column-start: 2;
+        grid-row-start: 3;
+        margin-left: 2rem;
+        align-self: center;
+    }
+
+    .main_review>.review_button {
+        grid-column-start: 2;
+        grid-row-start: 4;
+        border-radius: 2rem;
+        width: 40%;
+        margin-top: 0;
+        height: 3rem;
+        justify-self: right;
+    }
+
+    .main_review>.review_button>p {
+        font-size: 1rem;
+        padding: 0.7rem;
+        margin:0;
+    }
+    .small_review > h1{
+        margin-top: 10rem;
+    }
+    .small_review > article{
+        display: flex;
+        margin: 4rem 0rem;
+    }
+    .small_review>article>div>.icon {
+        height: 3rem;
+        width: 100%;
+    }
+    .small_review > article >p{
+        align-self: center;
+        margin-left: 3rem;
+    }
+    .user_review > article{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax( 400px, 1fr));
+        align-items: space-around;
+    }
+    .user {
+        background-color:white;
+        width: auto;
+        margin: 2rem;
+    }
+    .user>p {
+        padding: 0.7vw;
+    }
+}
+
+@media all and (min-width: 1001px) {
+    main{
+        margin:0 7vw;
+    }
+    
+    .main_review {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2rem 3rem 15rem 4rem;
+    }
+
+    .main_review>.pic {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row: span 4;
+        height: 100%;
+    }
+
+    .main_review>h1 {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        margin: 0 2rem;
+        text-align: left;
+        font-size: 1.7rem;
+    }
+
+    .main_rating {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        margin: 0 2rem;
+        padding: .7rem 0;
+    }
+
+    .main_review>p {
+        grid-column-start: 2;
+        grid-row-start: 3;
+        margin-left: 2rem;
+        align-self: center;
+    }
+
+    .main_review>.review_button {
+        grid-column-start: 2;
+        grid-row-start: 4;
+        border-radius: 2rem;
+        width: 40%;
+        margin-top: 0;
+        height: 3rem;
+        justify-self: right;
+    }
+
+    .main_review>.review_button>p {
+        font-size: 1rem;
+        padding: 0.7rem;
+        margin:0;
+    }
+    .small_review > h1{
+        margin-top: 10rem;
+    }
+    .small_review > article{
+        display: flex;
+        margin: 4rem 6rem;
+    }
+    .small_review>article>div>.icon {
+        height: 3rem;
+        width: 100%;
+    }
+    .small_review > article >p{
+        align-self: center;
+        margin-left: 3rem;
+    }
+    .all_reviews{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        align-items: space-around;
+    }
+    .user {
+        background-color:white;
+        width: auto;
+        margin: 2rem;
+    }
+    .user>p {
+        padding: 0.7vw;
+    }
+}

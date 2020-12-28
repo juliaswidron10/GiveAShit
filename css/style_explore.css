@@ -1,0 +1,95 @@
+main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: space-between;
+    margin: 6rem auto;
+    max-width: 1200px;
+}
+article {
+    width: 250px;
+    position: relative;
+    margin: auto;
+}
+
+.pic {
+    height: 250px;
+    width: 100%;
+    background-color: hotpink;
+    position: relative;
+    margin: 0px;
+    border-radius: 15px 15px 0px 0px;
+    overflow: hidden;
+}
+.pic > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+article > h1 {
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: .3rem;
+}
+.sect_class {
+    width: 250px;
+    height: 320px;
+    background-color: rgb(242, 242, 242);
+    border-radius: 15px;
+}
+
+/* ranting miniature */
+
+.gen_rating {
+    height: 25px;
+    width: 100%;
+    display: flex;
+    padding: 0.6rem;
+}
+.gen_rating > h2 {
+    font-size: 1.2rem;
+    font-weight: 100;
+    margin: 0px 0.7rem;
+}
+.poop {
+    width: 35px;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+div.filled_poop {
+    background-image: url(../images/poop_empty_1.svg);
+}
+div.empty_poop {
+    background-image: url(../images/poop_filled.svg);
+}
+.sect_class > h3 {
+    font-weight: 100;
+    font-size: 0.9rem;
+    margin: 0px 0.6rem;
+}
+
+/* read more button */
+.readmore {
+    background-color: rgb(18, 33, 115);
+    text-align: center;
+    width: 50%;
+    margin-left: 55%;
+    margin-top: -2rem;
+    box-shadow:none;
+    border-radius: 2rem;
+
+}
+.readmore > p {
+    color: white;
+    padding: 0.6rem;
+}
+
+@media all and (max-width: 549px){
+    .readmore{
+        width: 100%;
+        margin: -1.3rem 0 0 0 ;
+        border-radius: 0 0 15px 15px;
+    }
+}
